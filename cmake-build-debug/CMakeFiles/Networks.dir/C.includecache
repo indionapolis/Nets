@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Pavel/programs/Networks/week1/common.h
+
+/Users/Pavel/programs/Networks/week1/server.c
+stdio.h
+-
+stdlib.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+netdb.h
+-
+memory.h
+-
+errno.h
+-
+zconf.h
+-
+common.h
+/Users/Pavel/programs/Networks/week1/common.h
+

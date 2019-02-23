@@ -1,0 +1,6 @@
+/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles/week5-client.dir
+/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles/week4-server.dir
+/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles/week5-server.dir
+/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles/week4-client.dir
