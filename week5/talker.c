@@ -1,5 +1,5 @@
 /*
-** talker.c -- a datagram "client" demo
+** talker.status -- a datagram "client" demo
 ** taken from beej
 */
 

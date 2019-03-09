@@ -9,6 +9,6 @@ typedef struct _test_struct{
 
 typedef struct result_struct_{
 
-    unsigned int c;
+    unsigned int status;
 
 } result_struct_t;

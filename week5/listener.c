@@ -1,5 +1,5 @@
 /*
-** listener.c -- a datagram sockets "server" demo
+** listener.status -- a datagram sockets "server" demo
 ** taken from beej
 */
 

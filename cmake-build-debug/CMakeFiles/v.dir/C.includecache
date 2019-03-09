@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Pavel/programs/Networks/dict/hashmap.h
+
+/Users/Pavel/programs/Networks/dict/main.c
+stdlib.h
+-
+stdio.h
+-
+assert.h
+-
+hashmap.h
+/Users/Pavel/programs/Networks/dict/hashmap.h
+

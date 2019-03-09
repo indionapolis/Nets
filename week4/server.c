@@ -169,7 +169,7 @@ setup_tcp_server_communication() {
                 printf("Group: %s\n", client_data->group);
 
                 result_struct_t result;
-                result.c = 200;
+                result.status = 200;
 
                 /* Server replying back to client now*/
                 sent_recv_bytes = sendto(comm_socket_fd, (char *) &result, sizeof(result_struct_t), 0,

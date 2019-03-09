@@ -90,7 +90,7 @@ void setup_tcp_communication() {
 
 	    printf("No of bytes received = %d\n", sent_recv_bytes);
 	    
-	    printf("Result received = %u\n", result.c);
+	    printf("Result received = %u\n", result.status);
     }
 }
     

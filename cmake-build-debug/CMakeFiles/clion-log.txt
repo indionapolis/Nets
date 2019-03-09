@@ -1,4 +1,4 @@
-"/Users/Pavel/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/Pavel/programs/Networks
+"/Users/Pavel/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/183.5429.37/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/Pavel/programs/Networks
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/Pavel/programs/Networks/cmake-build-debug
