@@ -40,8 +40,8 @@ map_t data_hashmap;
 /*Server process is running on this port no. Client has to send data to this port no*/
 #define SERVER_PORT     2001
 
-#define DEST_PORT            2001
-#define SERVER_IP_ADDRESS   "10.91.45.222"
+#define DEST_PORT            2000
+#define SERVER_IP_ADDRESS   "127.0.0.1"
 
 test_struct_t client_data;
 test_struct_t test_struct;
@@ -64,7 +64,7 @@ void ping(int item, data_struct_t* data) {
 
 
     result_struct_t result;
-    result.string = "ping";
+    strcpy(result.string, "ping");
 
 
     sendto(comm_socket_fd, (char *) &result, sizeof(result_struct_t), 0,
@@ -230,10 +230,12 @@ void client(){
 
 
 //        send response
-        client_data.string = "pong";
+
+        result_struct_t msg;
+        strcpy(msg.string, "pong");
 
         sendto(sockfd,
-             &client_data,
+             &msg,
              sizeof(test_struct_t),
              0,
              (struct sockaddr *)&dest,
@@ -245,12 +247,8 @@ void client(){
 }
 
 int main(int argc, char **argv) {
-    pthread_t threads[5];
+    pthread_t threads[1];
     pthread_create(&threads[0], NULL, (void *)client, NULL);
-    pthread_create(&threads[1], NULL, (void *)client, NULL);
-    pthread_create(&threads[2], NULL, (void *)client, NULL);
-    pthread_create(&threads[3], NULL, (void *)client, NULL);
-    pthread_create(&threads[4], NULL, (void *)client, NULL);
     server();
     return 0;
 }
