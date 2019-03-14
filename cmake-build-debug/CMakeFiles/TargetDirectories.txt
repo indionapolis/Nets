@@ -1,4 +1,6 @@
 /Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles/torrent.dir
+/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles/playground.dir
 /Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles/node-test.dir
 /Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles/week5-client.dir
 /Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles/dictionary.dir

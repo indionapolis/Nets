@@ -14,7 +14,7 @@
 #include <arpa/inet.h>
 
 /*Server process is running on this port no. Client has to send data to this port no*/
-#define SERVER_PORT     2007
+#define SERVER_PORT     2099
 
 test_struct_t test_struct;
 result_struct_t res_struct;
@@ -168,12 +168,13 @@ setup_tcp_server_communication() {
                 printf("Age: %d\n", client_data->age);
                 printf("Group: %s\n", client_data->group);
 
-                result_struct_t result;
-                result.status = 200;
+                char* resp = "hello";
 
-                /* Server replying back to client now*/
-                sent_recv_bytes = sendto(comm_socket_fd, (char *) &result, sizeof(result_struct_t), 0,
-                                         (struct sockaddr *) &client_addr, sizeof(struct sockaddr));
+//                /* Server replying back to client now*/
+//                sent_recv_bytes = sendto(comm_socket_fd, (char *) &res, sizeof(char)*10 , 0,
+//                                         (struct sockaddr *) &client_addr, sizeof(struct sockaddr));
+
+                write(comm_socket_fd, resp, sizeof(char)*5);
 
                 printf("Server sent %d bytes in reply to client\n", sent_recv_bytes);
                 /*Goto state machine State 3*/

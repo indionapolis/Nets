@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named torrent
+
+# Build rule for target.
+torrent: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 torrent
+.PHONY : torrent
+
+# fast build rule for target.
+torrent/fast:
+	$(MAKE) -f CMakeFiles/torrent.dir/build.make CMakeFiles/torrent.dir/build
+.PHONY : torrent/fast
+
+#=============================================================================
+# Target rules for targets named playground
+
+# Build rule for target.
+playground: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 playground
+.PHONY : playground
+
+# fast build rule for target.
+playground/fast:
+	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/build
+.PHONY : playground/fast
+
+#=============================================================================
 # Target rules for targets named node-test
 
 # Build rule for target.
@@ -187,6 +213,33 @@ week4-client: cmake_check_build_system
 week4-client/fast:
 	$(MAKE) -f CMakeFiles/week4-client.dir/build.make CMakeFiles/week4-client.dir/build
 .PHONY : week4-client/fast
+
+PlayGround/main.o: PlayGround/main.c.o
+
+.PHONY : PlayGround/main.o
+
+# target to build an object file
+PlayGround/main.c.o:
+	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/PlayGround/main.c.o
+.PHONY : PlayGround/main.c.o
+
+PlayGround/main.i: PlayGround/main.c.i
+
+.PHONY : PlayGround/main.i
+
+# target to preprocess a source file
+PlayGround/main.c.i:
+	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/PlayGround/main.c.i
+.PHONY : PlayGround/main.c.i
+
+PlayGround/main.s: PlayGround/main.c.s
+
+.PHONY : PlayGround/main.s
+
+# target to generate assembly for a file
+PlayGround/main.c.s:
+	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/PlayGround/main.c.s
+.PHONY : PlayGround/main.c.s
 
 dict/hashmap.o: dict/hashmap.c.o
 
@@ -380,6 +433,60 @@ week7/node.c.s:
 	$(MAKE) -f CMakeFiles/node-test.dir/build.make CMakeFiles/node-test.dir/week7/node.c.s
 .PHONY : week7/node.c.s
 
+week8/hashmap.o: week8/hashmap.c.o
+
+.PHONY : week8/hashmap.o
+
+# target to build an object file
+week8/hashmap.c.o:
+	$(MAKE) -f CMakeFiles/torrent.dir/build.make CMakeFiles/torrent.dir/week8/hashmap.c.o
+.PHONY : week8/hashmap.c.o
+
+week8/hashmap.i: week8/hashmap.c.i
+
+.PHONY : week8/hashmap.i
+
+# target to preprocess a source file
+week8/hashmap.c.i:
+	$(MAKE) -f CMakeFiles/torrent.dir/build.make CMakeFiles/torrent.dir/week8/hashmap.c.i
+.PHONY : week8/hashmap.c.i
+
+week8/hashmap.s: week8/hashmap.c.s
+
+.PHONY : week8/hashmap.s
+
+# target to generate assembly for a file
+week8/hashmap.c.s:
+	$(MAKE) -f CMakeFiles/torrent.dir/build.make CMakeFiles/torrent.dir/week8/hashmap.c.s
+.PHONY : week8/hashmap.c.s
+
+week8/node.o: week8/node.c.o
+
+.PHONY : week8/node.o
+
+# target to build an object file
+week8/node.c.o:
+	$(MAKE) -f CMakeFiles/torrent.dir/build.make CMakeFiles/torrent.dir/week8/node.c.o
+.PHONY : week8/node.c.o
+
+week8/node.i: week8/node.c.i
+
+.PHONY : week8/node.i
+
+# target to preprocess a source file
+week8/node.c.i:
+	$(MAKE) -f CMakeFiles/torrent.dir/build.make CMakeFiles/torrent.dir/week8/node.c.i
+.PHONY : week8/node.c.i
+
+week8/node.s: week8/node.c.s
+
+.PHONY : week8/node.s
+
+# target to generate assembly for a file
+week8/node.c.s:
+	$(MAKE) -f CMakeFiles/torrent.dir/build.make CMakeFiles/torrent.dir/week8/node.c.s
+.PHONY : week8/node.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -387,6 +494,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... torrent"
+	@echo "... playground"
 	@echo "... node-test"
 	@echo "... week5-client"
 	@echo "... dictionary"
@@ -394,6 +503,9 @@ help:
 	@echo "... week4-server"
 	@echo "... week5-server"
 	@echo "... week4-client"
+	@echo "... PlayGround/main.o"
+	@echo "... PlayGround/main.i"
+	@echo "... PlayGround/main.s"
 	@echo "... dict/hashmap.o"
 	@echo "... dict/hashmap.i"
 	@echo "... dict/hashmap.s"
@@ -415,6 +527,12 @@ help:
 	@echo "... week7/node.o"
 	@echo "... week7/node.i"
 	@echo "... week7/node.s"
+	@echo "... week8/hashmap.o"
+	@echo "... week8/hashmap.i"
+	@echo "... week8/hashmap.s"
+	@echo "... week8/node.o"
+	@echo "... week8/node.i"
+	@echo "... week8/node.s"
 .PHONY : help
 
 

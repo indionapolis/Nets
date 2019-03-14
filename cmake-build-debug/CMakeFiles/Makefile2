@@ -65,6 +65,80 @@ CMAKE_SOURCE_DIR = /Users/Pavel/programs/Networks
 CMAKE_BINARY_DIR = /Users/Pavel/programs/Networks/cmake-build-debug
 
 #=============================================================================
+# Target rules for target CMakeFiles/torrent.dir
+
+# All Build rule for target.
+CMakeFiles/torrent.dir/all:
+	$(MAKE) -f CMakeFiles/torrent.dir/build.make CMakeFiles/torrent.dir/depend
+	$(MAKE) -f CMakeFiles/torrent.dir/build.make CMakeFiles/torrent.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles --progress-num=9,10,11 "Built target torrent"
+.PHONY : CMakeFiles/torrent.dir/all
+
+# Include target in all.
+all: CMakeFiles/torrent.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/torrent.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/torrent.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/torrent.dir/rule
+
+# Convenience name for target.
+torrent: CMakeFiles/torrent.dir/rule
+
+.PHONY : torrent
+
+# clean rule for target.
+CMakeFiles/torrent.dir/clean:
+	$(MAKE) -f CMakeFiles/torrent.dir/build.make CMakeFiles/torrent.dir/clean
+.PHONY : CMakeFiles/torrent.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/torrent.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/playground.dir
+
+# All Build rule for target.
+CMakeFiles/playground.dir/all:
+	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/depend
+	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target playground"
+.PHONY : CMakeFiles/playground.dir/all
+
+# Include target in all.
+all: CMakeFiles/playground.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/playground.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/playground.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/playground.dir/rule
+
+# Convenience name for target.
+playground: CMakeFiles/playground.dir/rule
+
+.PHONY : playground
+
+# clean rule for target.
+CMakeFiles/playground.dir/clean:
+	$(MAKE) -f CMakeFiles/playground.dir/build.make CMakeFiles/playground.dir/clean
+.PHONY : CMakeFiles/playground.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/playground.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/node-test.dir
 
 # All Build rule for target.
@@ -108,7 +182,7 @@ clean: CMakeFiles/node-test.dir/clean
 CMakeFiles/week5-client.dir/all:
 	$(MAKE) -f CMakeFiles/week5-client.dir/build.make CMakeFiles/week5-client.dir/depend
 	$(MAKE) -f CMakeFiles/week5-client.dir/build.make CMakeFiles/week5-client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target week5-client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target week5-client"
 .PHONY : CMakeFiles/week5-client.dir/all
 
 # Include target in all.
@@ -182,7 +256,7 @@ clean: CMakeFiles/dictionary.dir/clean
 CMakeFiles/week4-server.dir/all:
 	$(MAKE) -f CMakeFiles/week4-server.dir/build.make CMakeFiles/week4-server.dir/depend
 	$(MAKE) -f CMakeFiles/week4-server.dir/build.make CMakeFiles/week4-server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target week4-server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles --progress-num=14,15 "Built target week4-server"
 .PHONY : CMakeFiles/week4-server.dir/all
 
 # Include target in all.
@@ -219,7 +293,7 @@ clean: CMakeFiles/week4-server.dir/clean
 CMakeFiles/week5-server.dir/all:
 	$(MAKE) -f CMakeFiles/week5-server.dir/build.make CMakeFiles/week5-server.dir/depend
 	$(MAKE) -f CMakeFiles/week5-server.dir/build.make CMakeFiles/week5-server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target week5-server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles --progress-num=18,19 "Built target week5-server"
 .PHONY : CMakeFiles/week5-server.dir/all
 
 # Include target in all.
@@ -256,7 +330,7 @@ clean: CMakeFiles/week5-server.dir/clean
 CMakeFiles/week4-client.dir/all:
 	$(MAKE) -f CMakeFiles/week4-client.dir/build.make CMakeFiles/week4-client.dir/depend
 	$(MAKE) -f CMakeFiles/week4-client.dir/build.make CMakeFiles/week4-client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target week4-client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/Pavel/programs/Networks/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target week4-client"
 .PHONY : CMakeFiles/week4-client.dir/all
 
 # Include target in all.

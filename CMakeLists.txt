@@ -13,3 +13,7 @@ add_executable(week5-client week5/talker.c)
 add_executable(dictionary dict/main.c dict/hashmap.h dict/hashmap.c)
 
 add_executable(node-test week7/node.c dict/hashmap.h dict/hashmap.c)
+
+add_executable(playground PlayGround/main.c)
+
+add_executable(torrent week8/node.c week8/hashmap.c)

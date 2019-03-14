@@ -45,6 +45,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/torrent.dir/DependInfo.cmake"
+  "CMakeFiles/playground.dir/DependInfo.cmake"
   "CMakeFiles/node-test.dir/DependInfo.cmake"
   "CMakeFiles/week5-client.dir/DependInfo.cmake"
   "CMakeFiles/dictionary.dir/DependInfo.cmake"
