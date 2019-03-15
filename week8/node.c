@@ -39,7 +39,7 @@ map_t data_hashmap;
 
 
 /*Server process is running on this port no. Client has to send data to this port no*/
-#define SERVER_PORT     2000
+#define SERVER_PORT     2002
 
 #define DEST_PORT            2000
 #define SERVER_IP_ADDRESS   "127.0.0.1"
@@ -80,8 +80,6 @@ int ping(int item, dict_data* data) {
 
 
 
-
-    sleep(1);
     return 0;
 
 }
@@ -183,7 +181,6 @@ void server(){
 
 
 void client(){
-    sleep(1);
     int socket_fd = 0;
 
     struct sockaddr_in dest;
@@ -242,13 +239,32 @@ void client(){
         } else if (response.string[3] = '\0', strcmp(response.string, "get") == 0) {
             char file[15];
             sscanf(&response.string[4], "%s", file);
-            printf("CLIENT: %s needed\n", file);
-//            todo send file back
+
+            char path[30];
+            sprintf(path, "./data/%s", file);
+            FILE* f = fopen(path, "r");
+            if (f != 0){
+                char buf[20];
+
+//              count words in file
+                int count = 0;
+                while( fscanf(f, "%s", buf) != EOF )
+                {
+                    count++;
+                }
+
+
+                send(socket_fd, &count, sizeof(int), 0);
+
+//              send file word by word
+                fseek(f, 0, SEEK_SET);
+                while(fscanf(f, "%s", buf) != EOF)
+                {
+                    send(socket_fd, buf, sizeof(char)*20, 0);
+                }
+            }
         }
-
     }
-
-
 }
 
 int print_host(int item, dict_data* data){
@@ -279,6 +295,8 @@ int print_file(int item, dict_data* data){
         printf("%s:%u %s\n", inet_ntoa(data->client_addr.sin_addr),
                ntohs(data->client_addr.sin_port), response.string);
     }
+
+    return 0;
 }
 
 void print_known_filess(){
@@ -292,7 +310,10 @@ void menu(){
         fgets(str, 1024, stdin);
 
         if (strcmp(str, "help\n") == 0){
-            printf("commands:\nls - list known hosts\nls -f - list known files\nget [peer ip_address:port] [file name]\n");
+            printf("commands:\nls     - list known hosts\n"
+                   "ls -f  - list known files\n"
+                   "ls -lf - list local files\n"
+                   "get [peer ip_address:port] [file name] - get file from known peer\n");
         } else if (strcmp(str, "ls\n") == 0) {
             print_known_hosts();
         } else if (strcmp(str, "ls -f\n") == 0) {
@@ -311,15 +332,38 @@ void menu(){
 
             ch = hashmap_get(data_hashmap, address, (void**)(&data));
             if (ch == 0){
+//              request data transfer
                 char msg[30];
                 sprintf(msg, "get %s", file);
                 send(data->socket_fd, msg, sizeof(char)*30, 0);
-//                todo receve data
+
+
+//              get number of words
+                int count;
+                recv(data->socket_fd, &count, sizeof(count), 0);
+                printf("MENU: got count: %d\n", count);
+
+
+//              read word by word
+                char path[30];
+                sprintf(path, "data/%s", file);
+                FILE *f = fopen(path, "w");
+                while (count){
+
+                    count--;
+                    recv(data->socket_fd, msg, sizeof(char)*20, 0);
+                    fprintf(f, "%s ", msg);
+                }
+
+                fclose(f);
+                printf("MENU: file downloaded successfully\n");
+
             }
 
         }
 
     }
+
 }
 
 int main(int argc, char **argv) {
